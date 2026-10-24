@@ -7,7 +7,7 @@ function App() {
 
 
 	return (
-		<BrowserRouter>
+		<BrowserRouter basename="/Movie-app">
 		  <Routes>
 				<Route path="/" element={<Browse/>}/>
 				<Route path="/search" element={<Search/>}/>
