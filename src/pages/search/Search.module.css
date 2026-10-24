@@ -1,0 +1,148 @@
+.searchPage {
+  min-height: 100vh;
+  padding: 100px 30px 40px;
+  background: #111111;
+  color: #f5f5f5;
+}
+
+.searchForm {
+  max-width: 600px;
+  margin: 0 auto 35px;
+  padding-bottom: 20px;
+  background: #fff;
+  border-radius: 3px;
+  color: #333;
+}
+
+.searchInputRow {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #00BBEC;
+}
+
+.searchInputRow input {
+  flex: 1;
+  min-width: 0;
+  margin-left: 20px;
+  padding: 15px 8px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #333;
+  font-size: 16px;
+}
+
+.searchInputRow input::placeholder {
+  color: #999;
+}
+
+.searchIcon {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.searchIcon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.searchActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.resetButton,
+.searchButton {
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.resetButton {
+  border: none;
+  background: #fff;
+  color: #444;
+}
+
+.resetButton:hover {
+  background: #dbdbdb;
+}
+
+.searchButton {
+  border: none;
+  background: #00BBEC;
+  color: #fff;
+}
+
+.searchButton:hover {
+  background: #0093b8;
+}
+
+.searchResults h2 {
+  margin-left: 10px;
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.searchGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 24px 18px;
+  padding: 0 40px;
+}
+
+.searchItem {
+  min-width: 0;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.searchItem img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.searchItem p {
+  margin-top: 8px;
+  color: #eee;
+  font-size: 14px;
+}
+
+.searchItem:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.noPoster {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 2 / 3;
+  background: #303030;
+  color: #ccc;
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  .searchPage {
+    padding: 90px 16px 30px;
+  }
+
+  .searchForm {
+    padding: 14px;
+  }
+
+  .searchGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
